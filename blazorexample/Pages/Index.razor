@@ -1,0 +1,25 @@
+﻿ @page "/"
+
+<SfDropDownList Titem="UserData" Tvalue="String" DataSource="Users">
+    Placeholder= "Select a user" > //I can't use Placeholder don't know why // Dimitri
+    <DropDownListFieldSettings Text="Name" Value="ID">
+</SfDropDownList>
+
+@code  {
+
+    public class UserData
+    {
+        public string Name { get; set; }
+        public string ID { get; set; }
+    }
+    List<UserData> Login = new List<UserData>
+    {
+        new UserData() { ID= "User1", Name= "Parents"},
+        new UserData() { ID= "User2", Name = "Medical Team"},
+        new UserData() { ID= "User3", Name= " ShonaquipEmployee"}
+
+
+
+};
+
+}
